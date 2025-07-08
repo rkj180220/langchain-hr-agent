@@ -6,6 +6,7 @@ dist/
 wheels/
 faiss_index/
 *.egg-info
+.idea/
 
 # Virtual environments
 .venv
