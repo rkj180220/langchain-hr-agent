@@ -51,6 +51,8 @@ Create a `.env` file in the project root:
 AWS_ACCESS_KEY_ID="your_aws_access_key_id"
 AWS_SECRET_ACCESS_KEY="your_aws_secret_access_key"
 AWS_REGION="your_aws_region" # e.g., us-east-1
+INSURANCE_DOC_KEY=doc_key_for_health_insurance_doc
+MASTER_HEALTH_CHECKUP_DOC_KEY=doc_key_for_master_health_checkup_doc
 ```
 
 ### 3. Google Docs API Setup (for MCP Tool)
