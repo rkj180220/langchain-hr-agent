@@ -1,0 +1,26 @@
+[project]
+name = "agent-hr-rag"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "langchain",
+    "langchain-community",
+    "langchain-openai",
+    "langchain-google-genai",
+    "google-api-python-client",
+    "google-auth-httplib2",
+    "google-auth-oauthlib",
+    "faiss-cpu",
+    "duckduckgo-search",
+    "python-dotenv",
+    "mcp[cli]",
+    "boto3",
+    "langchain-aws",
+    "dotenv",
+    "pypdf",
+    "python-dotenv",
+]
+[tool.setuptools.packages.find]
+exclude = ["hr_docs*", "faiss_index*"]

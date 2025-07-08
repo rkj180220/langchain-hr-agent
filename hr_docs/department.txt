@@ -1,0 +1,512 @@
+# Recent Wins | Presales India
+
+**Author:** Chintha, Tilak  
+**Role:** Head Presales, Digital transformation, India
+
+## Executive Summary
+
+At Presidio, client success stories represent strong validations of trust, innovation, and long-term impact. This document highlights exceptional wins that reaffirm Presidio's position as a strategic technology partner across biotech and digital transformation landscapes.
+
+## Major Wins
+
+### Modern Platforms: $3.38M DevOps Renewal with Sarepta Therapeutics
+
+**Client:** Sarepta Therapeutics (global leader in genetic medicine)  
+**Contract Value:** $3.38 million  
+**Duration:** 24-month DevOps Engineering POD  
+**Margin:** 39.86%  
+
+**Services Delivered:**
+- In-house DevOps Platform Engineering support
+- Scalability, performance, and security across critical digital infrastructure
+- Continuous delivery and platform engineering
+
+**Key Personnel:**
+- Charles Drakos (Leadership)
+- Brian Tully (Leadership)
+- Pandiarajan Babu (Leadership)
+- Delivery teams across India and US
+
+**Impact:** Positioned Presidio as a trusted technology ally in the biotech space with opportunities for expansion as Sarepta grows operations.
+
+## Application Development Projects
+
+### Aetna Healthcare Solutions
+
+**Client Overview:**
+- Leading American-managed healthcare company
+- Subsidiary of CVS Health (since November 28, 2018)
+- Services: Medical, pharmaceutical, dental, behavioral health, long-term care, and disability plans
+
+**Applications Supported:**
+1. OPD (Omega Plan Designer)
+2. EMMY (Electronic Member Material Yearly)
+3. Vendor Management System
+4. Plan Doc Creation Tool
+
+#### OPD (Omega Plan Designer)
+
+**Purpose:** Insurance plan design, creation, update, and maintenance  
+**Plan Types:** Medicare (MD) and Pharmacy (RX) under Individual and Group Plans  
+
+**Background:** Replaces two legacy applications (MPDT - Medicare Product Design Tool and IMP - Individual Medicare Product)
+
+**Technology Stack:**
+- C# .NET Framework
+- React JS
+- Microsoft SQL Server
+
+**Key Capabilities:**
+- Plan design and creation
+- Plan updates and maintenance
+- Medicare and Pharmacy plan management
+- Individual and Group plan support
+
+#### EMMY (Electronic Member Material Yearly)
+
+**Purpose:** Document creation with reduced turnaround time and increased flexibility  
+**Template System:** M+ (Custom Template Language)
+
+**Document Types:**
+- CMS Requirement documents
+- EOC (Evidence of Coverage)
+- ANOC (Annual Notice of Changes)
+- POSTANOC (Post Annual Notice of Changes)
+- PDN (Plan Document Notice)
+
+**Technology Stack:**
+- C# .NET Framework
+- React JS
+- Microsoft SQL Server
+
+**Benefits:**
+- Faster document creation
+- Template-based standardization
+- Regulatory compliance support
+
+#### Vendor Management System
+
+**Challenge:** Legacy process required 54 separate SSIS packages for 18 vendors across 18 benefits and 3 categories, requiring 6 months development time.
+
+**Solution:** Automated ETL (Extract, Transform, Load) solution for vendor file validation and processing
+
+**Technology Stack:**
+- C# .NET Framework
+- React JS
+- Microsoft SQL Server
+- SSIS (SQL Server Integration Services)
+
+**Benefits:**
+- Reduced manual efforts
+- Enhanced efficiency and scalability
+- Streamlined vendor file processing
+- Automated validation workflows
+
+#### Plan Doc Creation Tool
+
+**Challenge:** Manual comparison between MPDT/IMP reports and new changes, leading to human error and time consumption in HRP template creation.
+
+**Solution:** Automated tool for HRP template generation based on plan changes
+
+**Technology Stack:**
+- Microsoft SQL Server
+- SSIS (SQL Server Integration Services)
+
+**Capabilities:**
+- Automated HRP template generation
+- Plan change detection and integration
+- Reduced manual errors
+- Improved processing time
+
+### Akamai Technologies Partnership
+
+**Client Background:**
+- Leader in content delivery networks (CDN)
+- Cybersecurity and DDoS mitigation services
+- Cloud services provider
+- Recently acquired Linode (Linux-powered virtual machines specialist)
+
+**Project Scope:** Linode Management Portal Enhancement
+
+**Objectives:**
+1. Enhance Management Portal toolsets for improved user experience and efficiency
+2. Improve storage scale-over functions to AWS for seamless experience
+3. Implement new product updates to empower users
+4. Integrate with Akamai's global engineering teams
+
+**Global Team Collaboration:**
+- Poland engineering team
+- San Jose, California (USA) team
+- US East Coast team
+- Bengaluru, India team
+
+**Technology Stack:**
+- **Frontend/UI:** React.js with Chakra UI
+- **Backend:** Python Flask
+- **Database:** Cassandra
+
+**Expected Outcomes:**
+1. Streamlined workflows and improved Management Portal tools
+2. Seamless storage scaling to AWS infrastructure
+3. Successful implementation of new product features
+4. Enhanced global team integration and collaboration
+
+## Keywords for Search Optimization
+
+**Industries:** Healthcare, Biotechnology, Content Delivery Networks, Cloud Computing, Genetic Medicine  
+**Technologies:** DevOps, C#, .NET Framework, React JS, Python Flask, Cassandra, Microsoft SQL Server, SSIS, AWS  
+**Services:** Platform Engineering, Application Development, ETL Solutions, Document Management, Plan Design, Vendor Management  
+**Clients:** Sarepta Therapeutics, Aetna, CVS Health, Akamai Technologies, Linode  
+**Geographic Presence:** India, United States, Poland  
+**Specializations:** Digital Transformation, Presales, Healthcare Technology, Cloud Migration, Automation
+
+# Alianza Communication Platform | APPDEV | DEVOPS | QA
+
+**Client:** Alianza
+**Project Type:** Application Development, DevOps, Quality Assurance
+**Current Date:** 2025-07-08
+**Document Owner:** rkj180220
+
+## Client Overview
+
+**Company:** Alianza
+**Industry:** Communication Service Provider
+**Mission:** Building compelling and elegant communications services that are easy and efficient for Service Providers to deliver, connecting end customers to their friends, families, employees, and customers.
+
+## Project Objective
+
+Develop AUCA (Alianza Unified Communications Application) - a comprehensive white-label cloud communications platform featuring voice, video, messaging, presence, and collaboration tools.
+
+**Scope:** Build a Chime-based modern meetings platform as part of AUCA application completely from scratch, including:
+- Web browser experience
+- Native applications for multiple operating systems
+- Cross-platform compatibility with features comparable to Microsoft Teams and Webex
+
+## Platform Coverage
+
+**Supported Operating Systems:**
+- Windows (Native application)
+- MacOS (Native application)
+- Android (Mobile application)
+- iOS (Mobile application)
+- Web browsers (Browser-based experience)
+
+## Core Features
+
+### Communication Features
+1. **Audio/Video Experience**
+   - High-quality voice calls
+   - Video conferencing capabilities
+   - Multi-participant support
+
+2. **Screen Share**
+   - Desktop sharing functionality
+   - Application-specific sharing
+   - Real-time collaboration support
+
+3. **Chat**
+   - Instant messaging
+   - Group chat capabilities
+   - Message history and search
+
+4. **PSTN Dial-in**
+   - Traditional phone system integration
+   - Global dial-in numbers
+   - Hybrid meeting support
+
+### Collaboration Features
+5. **Whiteboard Collaboration**
+   - Real-time collaborative whiteboarding
+   - Drawing and annotation tools
+   - Shared workspace functionality
+
+6. **Calendar Integration**
+   - Meeting scheduling
+   - Calendar synchronization
+   - Automated invitations and reminders
+
+7. **Recording & Transcription**
+   - Meeting recording capabilities
+   - Automatic transcription services
+   - Playback and sharing functionality
+
+### Meeting Management Features
+8. **Host Controls**
+   - Meeting moderation tools
+   - Participant management
+   - Administrative controls
+
+9. **Guest User Access**
+   - External participant support
+   - Secure guest access
+   - No-registration meeting join
+
+10. **Adhoc and In-app Meeting Scheduling**
+    - Instant meeting creation
+    - Scheduled meeting management
+    - Integrated scheduling experience
+
+11. **Notifications**
+    - Real-time alerts
+    - Meeting reminders
+    - Status updates
+
+12. **Lock Meeting and Cohost Assignment**
+    - Meeting security controls
+    - Cohost delegation
+    - Access management
+
+## Technology Stack
+
+### Frontend/UI Development
+- **TypeScript:** Primary programming language for type-safe development
+- **React:** Web application framework
+- **React Native:** Cross-platform mobile development
+- **Swift:** iOS native development
+- **Kotlin:** Android native development
+
+### UI Framework
+- **Chakra UI:** Component library for consistent design system
+
+### Backend Development
+- **Spring Boot:** Java-based backend framework for microservices architecture
+
+### Database
+- **DynamoDB:** NoSQL database for scalable data storage
+
+### Cloud Services (AWS)
+- **Amazon Chime:** Core communication service for voice, video, and messaging
+- **API Gateway:** API management and routing
+- **EventBridge:** Event-driven architecture and service integration
+- **Lambda:** Serverless computing for backend functions
+
+## Technical Architecture
+
+**Architecture Pattern:** Microservices with serverless components
+**Cloud Provider:** Amazon Web Services (AWS)
+**Communication Core:** Amazon Chime SDK integration
+**Development Approach:** Cross-platform with native performance optimization
+
+## Competitive Positioning
+
+**Comparable Platforms:**
+- Microsoft Teams feature parity
+- Webex functionality equivalent
+- Enterprise-grade communication tools
+- White-label customization capabilities
+
+## Service Delivery Areas
+
+**Application Development (APPDEV):**
+- Full-stack application development
+- Cross-platform native development
+- Web application development
+- Mobile application development
+
+**DevOps:**
+- Cloud infrastructure management
+- CI/CD pipeline implementation
+- AWS services integration
+- Deployment automation
+
+**Quality Assurance (QA):**
+- Cross-platform testing
+- Performance testing
+- Security testing
+- User experience testing
+
+## Project Outcomes
+
+**Primary Deliverable:** AUCA - Full-featured white-label cloud communications application
+
+**Key Benefits:**
+- Unified communication platform
+- Cross-platform compatibility
+- Enterprise-grade features
+- Scalable cloud architecture
+- White-label customization
+- Modern user experience
+
+## Keywords for Search Optimization
+
+**Industries:** Telecommunications, Communication Service Provider, Cloud Communications, Unified Communications
+**Technologies:** TypeScript, React, React Native, Swift, Kotlin, Spring Boot, DynamoDB, AWS Chime, API Gateway, EventBridge, Lambda, Chakra UI
+**Services:** Application Development, DevOps, Quality Assurance, Cross-platform Development, Cloud Communications, Video Conferencing
+**Features:** Voice Calls, Video Conferencing, Screen Sharing, Whiteboard Collaboration, Chat, PSTN Integration, Meeting Recording, Transcription
+**Platforms:** Windows, MacOS, Android, iOS, Web Browser, Cross-platform
+**Solutions:** White-label Communications, Modern Meetings Platform, Unified Communications, Enterprise Collaboration
+**Competitors:** Microsoft Teams, Webex, Zoom, Slack
+**Cloud Services:** Amazon Web Services, Chime SDK, Serverless Architecture, Microservices
+
+
+# Disney TRON Platform | APPDEV | DATA | QA
+
+**Client:** Disney
+**Project Name:** TRON (Transformative Orchestration for Networks)
+**Project Type:** Application Development, Data Engineering, Quality Assurance
+**Current Date:** 2025-07-08 11:19:27
+**Document Owner:** rkj180220
+
+## Project Overview
+
+**Platform Name:** TRON - Transformative Orchestration for Networks
+**Target Network:** Disney Global Network (DGN)
+**Project Type:** Network automation platform
+**Objective:** Transform the Disney Global Network into a self-service network through comprehensive automation
+
+## Business Objective
+
+TRON serves as a comprehensive automation platform designed specifically for Disney Global Network (DGN) operations. The platform fundamentally transforms network management by converting traditional manual processes into automated, self-service workflows with built-in validation and approval mechanisms.
+
+**Primary Goal:** Enable Disney's global network infrastructure to operate as a self-service platform, reducing manual intervention while maintaining security, compliance, and operational excellence.
+
+## Key Outcomes and Automated Workflows
+
+### Network Workflow Simplification
+The TRON platform automates and simplifies critical network workflows through intelligent orchestration and validation processes:
+
+### 1. Network Device Setup for New Disney Locations
+**Capability:** Automated provisioning and configuration of network infrastructure
+- New location network device deployment
+- Standardized configuration templates
+- Automated device registration and integration
+- Location-specific network parameter configuration
+
+### 2. Service Installation at Existing Sites
+**Capability:** Service provisioning and installation automation
+- Service request processing and validation
+- Automated service deployment workflows
+- Configuration management for service additions
+- Integration with existing site infrastructure
+
+### 3. Domain Name Creation and IP Address Reservation
+**Capability:** DNS and IP address management automation
+- Automated domain name system (DNS) management
+- IP address pool management and reservation
+- Application-specific network resource allocation
+- Conflict detection and resolution
+
+### 4. Firewall Rules Management and Compliance Remediation
+**Capability:** Security policy automation and compliance management
+- New firewall rule creation and validation
+- Existing firewall rule modification workflows
+- Automated compliance checking and remediation
+- Security policy enforcement automation
+- Network device compliance monitoring and correction
+
+### 5. Security Patch Installation and Configuration Management
+**Capability:** Network device maintenance automation
+- Automated security patch deployment
+- Configuration modification workflows
+- Change management and rollback capabilities
+- Maintenance scheduling and coordination
+
+### 6. Network Device Registration
+**Capability:** Device lifecycle management automation
+- New network device registration within DGN
+- Device inventory management
+- Asset tracking and compliance
+- Integration with existing network management systems
+
+## Technology Stack
+
+### Frontend Development
+- **Next.js:** React-based frontend framework for server-side rendering and static site generation
+- Modern user interface for self-service network operations
+- Responsive design for multi-device access
+
+### Backend Development
+- **Python FastAPI:** High-performance API framework for backend services
+- **Apache Airflow DAG:** Workflow orchestration and task scheduling
+- RESTful API architecture for service integration
+- Asynchronous processing capabilities
+
+### Database Management
+- **PostgreSQL:** Primary relational database for structured data management
+- **MongoDB:** NoSQL database for flexible document storage
+- Hybrid database architecture for optimal data handling
+- Data consistency and integrity management
+
+### Infrastructure and Deployment
+- **Kubernetes:** Container orchestration platform for scalable deployment
+- Microservices architecture
+- High availability and fault tolerance
+- Automated scaling and resource management
+
+### Data Engineering
+- **Python:** Primary programming language for data processing and analytics
+- Data pipeline development and management
+- ETL (Extract, Transform, Load) processes
+- Data validation and quality assurance
+
+## Service Delivery Areas
+
+### Application Development (APPDEV)
+- Full-stack web application development
+- API development and integration
+- User interface design and implementation
+- Workflow automation development
+
+### Data Engineering (DATA)
+- Data pipeline architecture and implementation
+- ETL process development
+- Data validation and quality assurance
+- Analytics and reporting capabilities
+
+### Quality Assurance (QA)
+- Automated testing for network workflows
+- Integration testing across Disney Global Network
+- Performance and load testing
+- Security and compliance testing
+
+## Technical Architecture
+
+**Architecture Pattern:** Microservices with workflow orchestration
+**Deployment Model:** Kubernetes-based containerized applications
+**Data Architecture:** Hybrid PostgreSQL and MongoDB storage
+**Workflow Engine:** Apache Airflow for complex network automation
+**API Framework:** FastAPI for high-performance service integration
+
+## Business Impact
+
+### Operational Efficiency
+- Reduced manual network operations
+- Standardized workflow processes
+- Faster deployment of network services
+- Improved resource utilization
+
+### Compliance and Security
+- Automated compliance checking
+- Consistent security policy enforcement
+- Audit trail and change tracking
+- Risk reduction through automation
+
+### Self-Service Capabilities
+- Empowered network users with self-service options
+- Reduced dependency on network operations teams
+- Faster service delivery
+- Improved user experience
+
+### Scalability and Reliability
+- Support for Disney's global network expansion
+- Consistent service delivery across locations
+- Fault-tolerant automation workflows
+- Scalable infrastructure management
+
+## Disney Global Network Integration
+
+**Network Scope:** Global Disney network infrastructure
+**Geographic Coverage:** Worldwide Disney locations and facilities
+**Integration Points:** Existing Disney network management systems
+**Service Categories:** Network provisioning, security management, compliance automation
+
+## Keywords for Search Optimization
+
+**Industries:** Entertainment, Media, Theme Parks, Global Network Operations, Network Automation
+**Technologies:** Next.js, Python, FastAPI, Apache Airflow, PostgreSQL, MongoDB, Kubernetes, Network Automation
+**Services:** Application Development, Data Engineering, Quality Assurance, Network Orchestration, Workflow Automation
+**Network Functions:** Device Provisioning, Firewall Management, DNS Management, IP Address Management, Security Patching, Compliance Remediation
+**Business Capabilities:** Self-Service Networks, Network Automation, Workflow Orchestration, Compliance Management, Security Automation
+**Client:** Disney, Disney Global Network, DGN, Entertainment Industry
+**Platform:** TRON, Transformative Orchestration for Networks, Network Automation Platform
+**Architecture:** Microservices, Kubernetes, Container Orchestration, Workflow Engine, Hybrid Database
