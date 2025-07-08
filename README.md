@@ -64,9 +64,9 @@ AWS_REGION="your_aws_region" # e.g., us-east-1
    - Application type: Desktop application
    - Download the JSON file and save it as `credentials.json` in the project root
 
-### 4. Prepare HR Policy Documents
+### 4. Prepare Company Internal Documents
 
-1. Create text files (.txt) containing your HR policies
+1. Create text files (.txt) or PDF files (.pdf) containing your company internal documents
 2. Place them in the `data/hr_policies/` directory
 
 ### 5. Update Document IDs
@@ -75,10 +75,8 @@ In `tools/mcp_tool.py`, update the dictionary `self.topic_to_doc` with actual Go
 
 ```python
 self.topic_to_doc = {
-    "health": "your_health_insurance_doc_id",
-    "liability": "your_liability_insurance_doc_id",
-    "property": "your_property_insurance_doc_id",
-    "general": "your_general_insurance_doc_id"
+    "insurance": "your_health_insurance_doc_id",
+    "master_health_checkup": "your_master_health_doc_id",
 }
 ```
 
@@ -88,13 +86,44 @@ self.topic_to_doc = {
 python main.py
 ```
 
-## Example Queries
+## Test Prompts
 
-- "Summarize all customer feedback related to our Q1 marketing campaigns."
-- "Compare our current hiring trend with industry benchmarks."
-- "Find relevant compliance policies related to AI data handling."
-- "What is our health insurance policy on dental coverage?"
-- "Are there any HR policies regarding remote work?"
+Use these example queries to test different capabilities of the research agent.
+
+### Insurance-Related Queries (MCP Tool)
+
+- "What coverage does our health insurance policy provide for dental procedures?"
+- "What is the process for scheduling a master health checkup through our company plan?"
+- "How do I file an insurance claim for medical expenses incurred outside our network?"
+- "Does our health insurance cover mental health counseling services?"
+
+### HR Policy Queries (RAG Tool)
+
+- "What is Presidio's policy on remote work arrangements?"
+- "How many paid vacation days are employees entitled to per year?"
+- "What is the company's maternity and paternity leave policy?"
+- "What are the guidelines for requesting educational assistance or tuition reimbursement?"
+- "What is our policy on performance reviews and promotions?"
+
+### Industry Information Queries (Web Search Tool)
+
+- "What are the current industry benchmarks for employee retention rates in IT consulting?"
+- "What are the latest regulations on data protection that might affect our AI initiatives?"
+- "How have IT consulting firms adapted their hiring strategies post-pandemic?"
+- "What are the emerging cybersecurity compliance requirements for companies handling sensitive data?"
+
+### Complex Multi-Tool Queries
+
+- "How does our parental leave policy compare with the industry standard, and what legal changes might affect it in the coming year?"
+- "What cybersecurity certifications should our IT team prioritize based on current market demands and our internal security policies?"
+- "Based on our current remote work policy and industry trends, what adjustments should we consider to remain competitive in talent acquisition?"
+- "Compare our Q2 2025 diversity hiring metrics with industry standards and recommend strategies to improve our recruiting pipeline for underrepresented groups."
+- "Analyze the correlation between our cybersecurity hiring trends and the performance of our 'AI Governance Framework' marketing campaign."
+- "What healthcare benefits are available to our remote employees across different states, and how does our remote work policy compare to industry benchmarks in the tech sector?"
+- "Create a comprehensive onboarding plan for new cloud architects that incorporates our certification requirements, training programs, and insurance benefits."
+- "How have our employee retention rates for military veterans compared to overall company retention since 2024?"
+- "Evaluate the ROI of our professional development investments compared to industry benchmarks and recommend adjustments to our certification reimbursement policies."
+- "What compliance considerations should we address when implementing AI-powered recruiting tools, based on our existing AI governance framework and current regulations?"
 
 ## Troubleshooting
 

@@ -3,7 +3,7 @@ from langchain.agents import AgentExecutor, create_react_agent
 from langchain_core.prompts import PromptTemplate
 from langchain_aws.chat_models import ChatBedrock
 from langchain.memory import ConversationBufferMemory
-from tools.rag_tool import RAGTool
+from tools.rag_tool import CompanyKnowledgeTool
 from tools.web_search_tool import WebSearchTool
 from tools.mcp_tool import MCPTool
 from utils.vector_store import setup_vector_store
@@ -24,7 +24,7 @@ def main():
     # Setup tools
     print("🛠️ Initializing tools...")
     vector_store = setup_vector_store("hr_docs")
-    rag_tool = RAGTool(vector_store).get_tool()
+    rag_tool = CompanyKnowledgeTool(vector_store).get_tool()
     web_search_tool = WebSearchTool().get_tool()
     mcp_tool = MCPTool().get_tool()
     tools = [rag_tool, web_search_tool, mcp_tool]
@@ -32,7 +32,7 @@ def main():
 
     # Create the agent prompt
     prompt_template = """
-    You are an expert HR assistant. Your goal is to provide accurate and helpful information to employees.
+    You are Presidio's Internal Research Agent. Your goal is to provide accurate and helpful information to employees.
     Use the available tools to answer questions. Be conversational and remember the previous parts of the conversation.
 
     TOOLS:
