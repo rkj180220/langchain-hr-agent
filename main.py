@@ -1,34 +1,38 @@
 import os
+import logging
 from langchain.agents import AgentExecutor, create_react_agent
 from langchain_core.prompts import PromptTemplate
 from langchain_aws.chat_models import ChatBedrock
 from langchain.memory import ConversationBufferMemory
 from tools.rag_tool import CompanyKnowledgeTool
 from tools.web_search_tool import WebSearchTool
-from tools.mcp_tool import MCPTool
 from utils.vector_store import setup_vector_store
 from dotenv import load_dotenv
+import config
 
 load_dotenv()
 
+# Setup logging
+logging.basicConfig(level=config.LOG_LEVEL, format=config.LOG_FORMAT)
+
 def main():
     """Main function to run the HR agent."""
-    print("🚀 Starting the HR AI Agent...")
+    logging.info("🚀 Starting the HR AI Agent...")
 
     # Setup the language model
     llm = ChatBedrock(
-        model_id="anthropic.claude-3-5-sonnet-20240620-v1:0",
-        model_kwargs={"temperature": 0.1},
-        region_name=os.environ.get("AWS_REGION", "us-west-2")
+        model_id=config.LLM_MODEL_ID,
+        model_kwargs={"temperature": config.LLM_TEMPERATURE},
+        region_name=os.environ.get("AWS_REGION", config.AWS_REGION)
     )
     # Setup tools
-    print("🛠️ Initializing tools...")
-    vector_store = setup_vector_store("hr_docs")
-    rag_tool = CompanyKnowledgeTool(vector_store).get_tool()
-    web_search_tool = WebSearchTool().get_tool()
-    mcp_tool = MCPTool().get_tool()
-    tools = [rag_tool, web_search_tool, mcp_tool]
-    print("✅ Tools initialized.")
+    logging.info("🛠️ Initializing tools...")
+    vector_store = setup_vector_store(config.VECTOR_STORE_PATH)
+    web_search_tool_instance = WebSearchTool()
+    rag_tool = CompanyKnowledgeTool(vector_store, web_search_tool=web_search_tool_instance).get_tool()
+    web_search_tool = web_search_tool_instance.get_tool()
+    tools = [rag_tool, web_search_tool]
+    logging.info("✅ Tools initialized.")
 
     # Create the agent prompt
     prompt_template = """
@@ -73,7 +77,9 @@ def main():
         agent=agent,
         tools=tools,
         verbose=True,
-        handle_parsing_errors=True
+        handle_parsing_errors=True,
+        max_iterations=config.AGENT_MAX_ITERATIONS,
+        early_stopping_method=config.AGENT_EARLY_STOPPING_METHOD
     )
 
     print("🤖 HR AI Agent is ready. How can I help you today?")
@@ -85,15 +91,21 @@ def main():
             if query.lower() in ["exit", "quit"]:
                 print("👋 Goodbye!")
                 break
-            if query:
+            if query.strip():
                 # Manually manage history
                 chat_history = memory.chat_memory.messages
-                response = agent_executor.invoke({
-                    "input": query,
-                    "chat_history": chat_history
-                })
-                memory.save_context({"input": query}, {"output": response["output"]})
-                print(f"\n🤖: {response['output']}\n")
+                try:
+                    response = agent_executor.invoke({
+                        "input": query,
+                        "chat_history": chat_history
+                    })
+                    memory.save_context({"input": query}, {"output": response["output"]})
+                    print(f"\n🤖: {response['output']}\n")
+                except Exception as e:
+                    logging.error(f"An error occurred during agent execution: {e}")
+                    print("🤖: I'm sorry, but I encountered an error. Please try again.")
+            else:
+                print("🤖: Please enter a query.")
         except (KeyboardInterrupt, EOFError):
             print("\n👋 Goodbye!")
             break
