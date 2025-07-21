@@ -1,3 +1,5 @@
+import os
+
 # config.py
 
 # LLM Configuration
@@ -17,3 +19,7 @@ VECTOR_STORE_K = 3
 LOG_LEVEL = "INFO"
 LOG_FORMAT = '%(asctime)s - %(levelname)s - %(message)s'
 
+# Langfuse Configuration
+LANGFUSE_PUBLIC_KEY = os.environ.get("LANGFUSE_PUBLIC_KEY")
+LANGFUSE_SECRET_KEY = os.environ.get("LANGFUSE_SECRET_KEY")
+LANGFUSE_HOST = os.environ.get("LANGFUSE_HOST", "http://localhost:3000")

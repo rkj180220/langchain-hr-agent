@@ -4,6 +4,7 @@ from langchain.agents import AgentExecutor, create_react_agent
 from langchain_core.prompts import PromptTemplate
 from langchain_aws.chat_models import ChatBedrock
 from langchain.memory import ConversationBufferMemory
+from langfuse.callback import CallbackHandler
 from tools.rag_tool import CompanyKnowledgeTool
 from tools.web_search_tool import WebSearchTool
 from utils.vector_store import setup_vector_store
@@ -19,11 +20,19 @@ def main():
     """Main function to run the HR agent."""
     logging.info("🚀 Starting the HR AI Agent...")
 
+    # Setup Langfuse handler
+    handler = CallbackHandler(
+        public_key=config.LANGFUSE_PUBLIC_KEY,
+        secret_key=config.LANGFUSE_SECRET_KEY,
+        host=config.LANGFUSE_HOST
+    )
+
     # Setup the language model
     llm = ChatBedrock(
         model_id=config.LLM_MODEL_ID,
         model_kwargs={"temperature": config.LLM_TEMPERATURE},
-        region_name=os.environ.get("AWS_REGION", config.AWS_REGION)
+        region_name=os.environ.get("AWS_REGION", config.AWS_REGION),
+        callbacks=[handler]
     )
     # Setup tools
     logging.info("🛠️ Initializing tools...")
@@ -76,40 +85,24 @@ def main():
     agent_executor = AgentExecutor(
         agent=agent,
         tools=tools,
+        memory=memory,
         verbose=True,
-        handle_parsing_errors=True,
         max_iterations=config.AGENT_MAX_ITERATIONS,
-        early_stopping_method=config.AGENT_EARLY_STOPPING_METHOD
+        early_stopping_method=config.AGENT_EARLY_STOPPING_METHOD,
+        callbacks=[handler]
     )
 
-    print("🤖 HR AI Agent is ready. How can I help you today?")
+    logging.info("🤖 HR AI Agent is ready to chat!")
 
-    # Main interaction loop
+    # Start conversation loop
     while True:
-        try:
-            query = input("> ")
-            if query.lower() in ["exit", "quit"]:
-                print("👋 Goodbye!")
-                break
-            if query.strip():
-                # Manually manage history
-                chat_history = memory.chat_memory.messages
-                try:
-                    response = agent_executor.invoke({
-                        "input": query,
-                        "chat_history": chat_history
-                    })
-                    memory.save_context({"input": query}, {"output": response["output"]})
-                    print(f"\n🤖: {response['output']}\n")
-                except Exception as e:
-                    logging.error(f"An error occurred during agent execution: {e}")
-                    print("🤖: I'm sorry, but I encountered an error. Please try again.")
-            else:
-                print("🤖: Please enter a query.")
-        except (KeyboardInterrupt, EOFError):
-            print("\n👋 Goodbye!")
+        user_input = input("\nYou: ")
+        if user_input.lower() in ["exit", "quit"]:
+            logging.info("👋 Exiting the HR AI Agent.")
             break
 
+        response = agent_executor.invoke({"input": user_input}, {"callbacks": [handler]})
+        print(f"\n🤖 **HR AI Agent:**\n{response['output']}\n")
 
 if __name__ == "__main__":
     main()
