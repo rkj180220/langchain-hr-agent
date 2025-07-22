@@ -1,0 +1,29 @@
+models:
+  # Default model configuration
+  - type: main
+    engine: amazon_bedrock
+    model_id: anthropic.claude-instant-v1
+    body:
+      temperature: 1.0
+      top_p: 1.0
+      top_k: 250
+      max_tokens_to_sample: 4096
+    parameters:
+      model_id: anthropic.claude-instant-v1
+      streaming: True
+
+rails:
+  input:
+    flows:
+      - input_moderation
+      - jailbreak_detection
+
+  output:
+    flows:
+      - fact_checking
+      - llm_moderation
+      - pii_detection
+
+  retrieval:
+    flows:
+      - llm_moderation

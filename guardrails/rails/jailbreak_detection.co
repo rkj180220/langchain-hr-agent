@@ -1,0 +1,11 @@
+define flow jailbreak_detection
+  user input: $input
+
+  # Check if the user is attempting to bypass system constraints
+  $is_jailbreak = $llm.is_jailbreak_attempt($input)
+
+  if $is_jailbreak
+    bot refuse "I cannot respond to requests that attempt to circumvent my operating guidelines."
+    stop
+  else
+    bot continue

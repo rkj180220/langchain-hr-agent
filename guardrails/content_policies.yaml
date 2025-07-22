@@ -1,0 +1,18 @@
+policies:
+  - name: Presidio Company Policy
+    description: Ensure responses comply with company policies
+    rules:
+      - Don't share sensitive company information
+      - Don't share employee personal data
+      - Maintain professional tone
+      - Don't provide legal advice
+      - Don't provide medical advice
+      - Refer to HR for specific employee issues
+
+  - name: HR Data Compliance
+    description: Ensure HR data handling compliance
+    rules:
+      - Don't share individual salary information
+      - Don't share performance review details
+      - Maintain confidentiality of employee records
+      - Only provide public company policy information

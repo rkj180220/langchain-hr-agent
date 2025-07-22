@@ -1,0 +1,11 @@
+define flow pii_detection
+  bot response: $response
+
+  # Check if the bot response contains personally identifiable information
+  $contains_pii = $llm.contains_pii($response)
+
+  if $contains_pii
+    bot response: "I cannot share specific personal information due to privacy policies."
+    stop
+  else
+    bot continue

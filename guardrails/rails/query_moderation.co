@@ -1,0 +1,11 @@
+define flow llm_moderation
+  user input: $input
+
+  # For search queries, check if appropriate
+  $is_appropriate = not $llm.is_harmful($input)
+
+  if not $is_appropriate
+    bot refuse "I cannot process this search query as it may contain inappropriate content."
+    stop
+  else
+    bot continue

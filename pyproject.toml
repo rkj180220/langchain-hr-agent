@@ -25,6 +25,8 @@ dependencies = [
     "tenacity",
     "typing-extensions",
     "pydantic>=2.0.0",
+    "nemoguardrails[all]",
+    "anthropic"
 ]
 [tool.setuptools.packages.find]
 exclude = ["hr_docs*", "faiss_index*"]

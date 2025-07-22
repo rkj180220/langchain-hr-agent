@@ -1,0 +1,11 @@
+define flow fact_checking
+  bot response: $response
+
+  # Use the guardrails model (Claude) to check facts
+  $is_factual = $llm.is_factually_consistent($response)
+
+  if not $is_factual
+    bot response: "I need to verify some information. Let me provide what I know for certain."
+    stop
+  else
+    bot continue

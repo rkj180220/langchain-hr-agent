@@ -9,7 +9,7 @@ AWS_REGION = "us-west-2"
 
 # Agent Configuration
 AGENT_MAX_ITERATIONS = 5
-AGENT_EARLY_STOPPING_METHOD = "generate"
+AGENT_EARLY_STOPPING_METHOD = "force"
 
 # Vector Store Configuration
 VECTOR_STORE_PATH = "hr_docs"

@@ -1,0 +1,11 @@
+define flow llm_moderation
+  bot response: $response
+
+  # Check if the bot output contains inappropriate content
+  $is_appropriate = not $llm.is_harmful($response)
+
+  if not $is_appropriate
+    bot response: "I apologize, but I need to provide a different response."
+    stop
+  else
+    bot continue
